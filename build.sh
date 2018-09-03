@@ -11,7 +11,7 @@ if [ -z ${TOKEN} -o ${TOKEN} == "null" ]; then
 fi
 
 function docker_pull() {
-  echo "### Pulling Artifactory $2 $3 from $1..."
+  echo "### Pulling Xray $2 $3 from $1..."
   TAG_EXISTS=$(curl -s -H "Authorization: JWT ${TOKEN}" https://hub.docker.com/v2/repositories/${DOCKER_USERNAME}/${DOCKER_REPONAME}/tags/?page_size=10000 | jq -r "[.results | .[] | .name == \"$2-$3\"] | any")
   echo "Check tag exists : $TAG_EXISTS"
   if [ "${TAG_EXISTS}" = "true" ]; then
