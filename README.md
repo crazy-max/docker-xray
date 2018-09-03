@@ -13,13 +13,13 @@ If you are interested, [check out](https://hub.docker.com/r/crazymax/) my other 
 
 The following images are mirrored :
 
-* [xray-server](https://bintray.com/jfrog/reg2/jfrog%3Axray-server) :
-* [xray-indexer](https://bintray.com/jfrog/reg2/jfrog%3Axray-indexer) :
-* [xray-analysis](https://bintray.com/jfrog/reg2/jfrog%3Axray-analysis) :
-* [xray-persist](https://bintray.com/jfrog/reg2/jfrog%3Axray-persist) :
-* [xray-rabbitmq](https://bintray.com/jfrog/reg2/jfrog%3Axray-rabbitmq) :
-* [xray-postgres](https://bintray.com/jfrog/reg2/jfrog%3Axray-postgres) :
-* [xray-mongo](https://bintray.com/jfrog/reg2/jfrog%3Axray-mongo) :
+* [xray-server](https://bintray.com/jfrog/reg2/jfrog%3Axray-server) : Generating violations, hosting API / UI endpoints, running scheduled jobs
+* [xray-indexer](https://bintray.com/jfrog/reg2/jfrog%3Axray-indexer) : Responsible for the indexing process
+* [xray-analysis](https://bintray.com/jfrog/reg2/jfrog%3Axray-analysis) : Responsible for enriching component metadata
+* [xray-persist](https://bintray.com/jfrog/reg2/jfrog%3Axray-persist) : Matching the given components graph, completing component naming, storing the data in the relevant databases
+* [xray-rabbitmq](https://bintray.com/jfrog/reg2/jfrog%3Axray-rabbitmq) : Microservice Communication and Messaging
+* [xray-postgres](https://bintray.com/jfrog/reg2/jfrog%3Axray-postgres) : Components Graph Database
+* [xray-mongo](https://bintray.com/jfrog/reg2/jfrog%3Axray-mongo) : Components Metadata and Configuration
 
 And are placed in the same repository on Docker Hub with translated tags. Here is a translation example :
 
@@ -33,4 +33,7 @@ And are placed in the same repository on Docker Hub with translated tags. Here i
 | docker.bintray.io/jfrog/xray-postgres:9.5.2            | crazymax/xray:postgres-9.5.2            |
 | docker.bintray.io/jfrog/xray-mongo:3.2.6               | crazymax/xray:mongo-3.2.6               |
 
-More info : https://www.jfrog.com/confluence/display/XRAY/Installing+Xray
+More info :
+
+* https://www.jfrog.com/confluence/display/XRAY/Installing+Xray
+* https://www.jfrog.com/confluence/display/XRAY/Xray+High+Availability
