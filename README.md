@@ -37,3 +37,4 @@ More info :
 
 * https://www.jfrog.com/confluence/display/XRAY/Installing+Xray
 * https://www.jfrog.com/confluence/display/XRAY/Xray+High+Availability
+* https://github.com/jfrog/artifactory-docker-examples
