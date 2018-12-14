@@ -2,9 +2,8 @@
 
 set -e
 
-DOCKER_USERNAME=${DOCKER_USERNAME:-"crazymax"}
-DOCKER_PASSWORD=${DOCKER_PASSWORD:-""}
-DOCKER_REPONAME=${DOCKER_REPONAME:-"xray"}
+DOCKER_USERNAME=${DOCKER_USERNAME:-crazymax}
+DOCKER_REPONAME=${DOCKER_REPONAME:-xray}
 TOKEN=$(curl -s -H "Content-Type: application/json" -X POST -d '{"username": "'${DOCKER_USERNAME}'", "password": "'${DOCKER_PASSWORD}'"}' https://hub.docker.com/v2/users/login/ | jq -r .token)
 
 if [ -z ${TOKEN} -o ${TOKEN} == "null" ]; then
