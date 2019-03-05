@@ -3,12 +3,15 @@ set -e
 
 DOCKER_USERNAME=${DOCKER_USERNAME:-crazymax}
 DOCKER_REPONAME=${DOCKER_REPONAME:-xray}
+BINTRAY_USERNAME=${BINTRAY_USERNAME:-crazy}
 TOKEN=$(curl -s -H "Content-Type: application/json" -X POST -d '{"username": "'${DOCKER_USERNAME}'", "password": "'${DOCKER_PASSWORD}'"}' https://hub.docker.com/v2/users/login/ | jq -r .token)
 
 if [ -z ${TOKEN} -o ${TOKEN} == "null" ]; then
   echo "Cannot retrieve token. Check your docker's credentials."
   exit 1
 fi
+
+echo "$BINTRAY_PASSWORD" | docker login docker.bintray.io --username "$BINTRAY_USERNAME" --password-stdin
 
 TAG_LIST=""
 function get_docker_tags() {
