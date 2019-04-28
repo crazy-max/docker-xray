@@ -24,5 +24,8 @@ script:
   - test $TRAVIS_PULL_REQUEST = false && bash .travis/push.sh
 
 notifications:
-  webhooks:
-    secure: gvBVcNBVPI8MiKKgs9rAXvfx3GTLSFpv4AoIlkejDDPV4SC0xzcniHoJyRa3iE+eYTe3x3gXbuJFGwPwQkt/mcdCHqrsWKc3tEmgGKJ4WfHntUhZg0umwAWoioflmaCkrg0M5ReS1Sw/K0cApvGRWoD+kJeRV7Vy1QZuMbkxSLjVbuPBFKO1bcaK2hSIPCyiZVXl1sEsv5vxBFy8PWi6A2teruPCRuWmXY9f+ZFouvk9NAQ7iBSHRHl2tVOt2vzxP6G8qFcjQRpICpp7Cg2YWyq/Z1fyshNpA7I50oKG6vNr2BgTNhQKV1N1JUP2NEwElq3ag8uUl9HoGi/89u41DH7sTWLdUoFtWHNnzx8O5WuSizal2NKpn4ylj+ColQqtS694KtUcMPcLONXH3tqVA+R9w+dM3rceKpzWDOQ6FLr6UVtvp20hlCDbdTUvV5T2orxBoGs+ZtNNVk2qZ4P4AEbscU2aObDGgNvORSv1Lp6B0be91FWYWaMw8tFiE4ud62ynU8Y2YI4P4DkrCNAweO24kJnPAJjDwEN6JnxSDMiGs0GPBkk4ZSYXhksCluyOfp/uamqyUIUl6JLiWltqNQ74Tb9XAqNspFzPuiwJKzgMQjvMGWKXbNFsFyHZ0ProFL2Kpq1RkTqGI7CcTEXzlpNCduoOtDdK9QGsVC8DGY8=
+  email:
+    recipients:
+      - travisci@crazymax.dev
+    on_success: always
+    on_failure: always
