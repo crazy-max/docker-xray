@@ -1,5 +1,4 @@
 <p align="center">
-  <a href="https://microbadger.com/images/crazymax/xray"><img src="https://images.microbadger.com/badges/version/crazymax/xray.svg?style=flat-square" alt="Version"></a>
   <a href="https://travis-ci.com/crazy-max/docker-xray"><img src="https://img.shields.io/travis/com/crazy-max/docker-xray/master.svg?style=flat-square" alt="Build Status"></a>
   <a href="https://hub.docker.com/r/crazymax/xray/"><img src="https://img.shields.io/docker/stars/crazymax/xray.svg?style=flat-square" alt="Docker Stars"></a>
   <a href="https://hub.docker.com/r/crazymax/xray/"><img src="https://img.shields.io/docker/pulls/crazymax/xray.svg?style=flat-square" alt="Docker Pulls"></a>
