@@ -10,6 +10,8 @@
 This is a simple mirror of [Xray](https://jfrog.com/xray/) Docker images taken from [JFrog Docker Registry](https://bintray.com/jfrog/reg2) and push to [Docker Hub](https://hub.docker.com/r/crazymax/xray/) and [Quay](https://quay.io/repository/crazymax/xray).<br />
 If you are interested, [check out](https://hub.docker.com/r/crazymax/) my other 🐳 Docker images!
 
+💡 Want to be notified of new releases? Check out 🔔 [Diun (Docker Image Update Notifier)](https://github.com/crazy-max/diun) project!
+
 The following images are mirrored :
 
 * [xray-server](https://bintray.com/jfrog/reg2/jfrog%3Axray-server) : Generating violations, hosting API / UI endpoints, running scheduled jobs
