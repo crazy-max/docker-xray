@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://travis-ci.com/crazy-max/docker-xray"><img src="https://img.shields.io/travis/com/crazy-max/docker-xray/master.svg?style=flat-square" alt="Build Status"></a>
+  <a href="https://github.com/crazy-max/docker-xray/actions?workflow=build"><img src="https://github.com/crazy-max/docker-xray/workflows/build/badge.svg" alt="Build Status"></a>
   <a href="https://hub.docker.com/r/crazymax/xray/"><img src="https://img.shields.io/docker/stars/crazymax/xray.svg?style=flat-square" alt="Docker Stars"></a>
   <a href="https://hub.docker.com/r/crazymax/xray/"><img src="https://img.shields.io/docker/pulls/crazymax/xray.svg?style=flat-square" alt="Docker Pulls"></a>
   <a href="https://quay.io/repository/crazymax/xray"><img src="https://quay.io/repository/crazymax/xray/status?style=flat-square" alt="Docker Repository on Quay"></a>
@@ -12,7 +12,7 @@ If you are interested, [check out](https://hub.docker.com/r/crazymax/) my other 
 
 💡 Want to be notified of new releases? Check out 🔔 [Diun (Docker Image Update Notifier)](https://github.com/crazy-max/diun) project!
 
-The following images are mirrored :
+The following images are mirrored:
 
 * [xray-server](https://bintray.com/jfrog/reg2/jfrog%3Axray-server) : Generating violations, hosting API / UI endpoints, running scheduled jobs
 * [xray-indexer](https://bintray.com/jfrog/reg2/jfrog%3Axray-indexer) : Responsible for the indexing process
@@ -22,7 +22,7 @@ The following images are mirrored :
 * [xray-postgres](https://bintray.com/jfrog/reg2/jfrog%3Axray-postgres) : Components Graph Database
 * [xray-mongo](https://bintray.com/jfrog/reg2/jfrog%3Axray-mongo) : Components Metadata and Configuration
 
-And are placed in the same repository on Docker Hub with translated tags. Here is a translation example :
+And are placed in the same repository on Docker Hub with translated tags. Here is a translation example:
 
 | JFrog registry                                         | Docker Hub                              |
 | ------------------------------------------------------ | --------------------------------------- |
@@ -34,7 +34,7 @@ And are placed in the same repository on Docker Hub with translated tags. Here i
 | docker.bintray.io/jfrog/xray-postgres:9.5.2            | crazymax/xray:postgres-9.5.2            |
 | docker.bintray.io/jfrog/xray-mongo:3.2.6               | crazymax/xray:mongo-3.2.6               |
 
-More info :
+More info:
 
 * https://www.jfrog.com/confluence/display/XRAY/Installing+Xray
 * https://www.jfrog.com/confluence/display/XRAY/Xray+High+Availability
