@@ -28,7 +28,7 @@ jobs:
         name: Get Docker JWT Token
         id: jwt
         run: |
-          TOKEN=$(curl -s -H "Content-Type: application/json" https://auth.docker.io/token?service=registry.docker.io&scope=repository:${{ steps.prepare.outputs.docker_image }}:pull | jq -r .token)
+          TOKEN=$(curl -s -H "Content-Type: application/json" "https://auth.docker.io/token?service=registry.docker.io&scope=repository:${{ steps.prepare.outputs.docker_image }}:pull" | jq -r .token)
           if [ -z ${TOKEN} -o ${TOKEN} == "null" ]; then
             echo "❌ Cannot retrieve token. Check your docker's credentials."
             exit 1
@@ -39,7 +39,7 @@ jobs:
         id: tags
         if: success()
         run: |
-          TAG_LIST=$(curl -s -H "Authorization: Bearer ${{ steps.jwt.outputs.token }}" https://index.docker.io/v2/${{ steps.prepare.outputs.docker_image }}/tags/list | jq -rc '.tags[]')
+          TAG_LIST=$(curl -s -H "Authorization: Bearer ${{ steps.jwt.outputs.token }}" "https://index.docker.io/v2/${{ steps.prepare.outputs.docker_image }}/tags/list" | jq -rc '.tags[]')
           echo ::set-output name=list::${TAG_LIST}
       -
         # https://github.com/actions/checkout
