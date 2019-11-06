@@ -3,6 +3,9 @@ name: build
 on:
   push:
     branches: 'master'
+    paths:
+      - '.github/workflows/build.yml'
+      - 'images/**'
 
 jobs:
   build:
