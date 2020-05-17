@@ -1,7 +1,7 @@
 <p align="center">
-  <a href="https://github.com/crazy-max/docker-xray/actions?workflow=build"><img src="https://github.com/crazy-max/docker-xray/workflows/build/badge.svg" alt="Build Status"></a>
-  <a href="https://hub.docker.com/r/crazymax/xray/"><img src="https://img.shields.io/docker/stars/crazymax/xray.svg?style=flat-square" alt="Docker Stars"></a>
-  <a href="https://hub.docker.com/r/crazymax/xray/"><img src="https://img.shields.io/docker/pulls/crazymax/xray.svg?style=flat-square" alt="Docker Pulls"></a>
+  <a href="https://github.com/crazy-max/docker-xray/actions?workflow=build"><img src="https://img.shields.io/github/workflow/status/crazy-max/docker-xray/build?label=build&logo=github&style=flat-square" alt="Build Status"></a>
+  <a href="https://hub.docker.com/r/crazymax/xray/"><img src="https://img.shields.io/docker/stars/crazymax/xray.svg?style=flat-square&logo=docker" alt="Docker Stars"></a>
+  <a href="https://hub.docker.com/r/crazymax/xray/"><img src="https://img.shields.io/docker/pulls/crazymax/xray.svg?style=flat-square&logo=docker" alt="Docker Pulls"></a>
 </p>
 
 ## About
