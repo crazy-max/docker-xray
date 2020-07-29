@@ -102,6 +102,12 @@ jobs:
           do
             docker_pull "docker.bintray.io/jfrog/xray-server" "server" "$version"
           done < "./images/xray-server.txt"
+
+          # Router
+          while IFS= read -r version
+          do
+            docker_pull "docker.bintray.io/jfrog/router" "router" "$version"
+          done < "./images/router.txt"
       -
         name: Docker Login
         if: success()
