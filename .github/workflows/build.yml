@@ -12,8 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+        name: Checkout
+        uses: actions/checkout@v2.3.2
+      -
         name: Prepare
-        id: prepare
+        id: prep
         run: |
           echo ::set-output name=build_date::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           echo ::set-output name=docker_image::crazymax/xray
@@ -28,7 +31,7 @@ jobs:
         name: Get Docker JWT Token
         id: jwt
         run: |
-          TOKEN=$(curl -s -H "Content-Type: application/json" "https://auth.docker.io/token?service=registry.docker.io&scope=repository:${{ steps.prepare.outputs.docker_image }}:pull" | jq -r .token)
+          TOKEN=$(curl -s -H "Content-Type: application/json" "https://auth.docker.io/token?service=registry.docker.io&scope=repository:${{ steps.prep.outputs.docker_image }}:pull" | jq -r .token)
           if [ -z ${TOKEN} -o ${TOKEN} == "null" ]; then
             echo "❌ Cannot retrieve token. Check your docker's credentials."
             exit 1
@@ -39,11 +42,8 @@ jobs:
         id: tags
         if: success()
         run: |
-          TAG_LIST=$(curl -s -H "Authorization: Bearer ${{ steps.jwt.outputs.token }}" "https://index.docker.io/v2/${{ steps.prepare.outputs.docker_image }}/tags/list" | jq -rc '.tags[]')
+          TAG_LIST=$(curl -s -H "Authorization: Bearer ${{ steps.jwt.outputs.token }}" "https://index.docker.io/v2/${{ steps.prep.outputs.docker_image }}/tags/list" | jq -rc '.tags[]')
           echo ::set-output name=list::${TAG_LIST}
-      -
-        name: Checkout
-        uses: actions/checkout@v2.3.2
       -
         name: Docker Pull
         if: success()
@@ -57,7 +57,7 @@ jobs:
               fi
             done
             docker pull $1:$3
-            docker tag $1:$3 ${{ steps.prepare.outputs.docker_image }}:$2-$3
+            docker tag $1:$3 ${{ steps.prep.outputs.docker_image }}:$2-$3
           }
 
           # Xray DB mongo
@@ -118,8 +118,8 @@ jobs:
         name: Docker Push
         if: success()
         run: |
-          if [[ -z $(docker image ls ${{ steps.prepare.outputs.docker_image }} --format "{{.ID}}") ]]; then
+          if [[ -z $(docker image ls ${{ steps.prep.outputs.docker_image }} --format "{{.ID}}") ]]; then
             echo "🔫 No tag to push"
             exit 0
           fi
-          docker push ${{ steps.prepare.outputs.docker_image }}
+          docker push ${{ steps.prep.outputs.docker_image }}
