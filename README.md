@@ -4,9 +4,26 @@
   <a href="https://hub.docker.com/r/crazymax/xray/"><img src="https://img.shields.io/docker/pulls/crazymax/xray.svg?style=flat-square&logo=docker" alt="Docker Pulls"></a>
 </p>
 
+## ⚠️ Abandoned project
+
+This project is not maintained anymore and is abandoned. Feel free to fork and make your own changes if needed.
+
+Fyi, Xray images are now publicly available:
+
+* `releases-docker.jfrog.io/jfrog/xray-mongo`
+* `releases-docker.jfrog.io/jfrog/xray-postgres`
+* `releases-docker.jfrog.io/jfrog/xray-rabbitmq`
+* `releases-docker.jfrog.io/jfrog/xray-persist`
+* `releases-docker.jfrog.io/jfrog/xray-analysis`
+* `releases-docker.jfrog.io/jfrog/xray-indexer`
+* `releases-docker.jfrog.io/jfrog/xray-server`
+* `releases-docker.jfrog.io/jfrog/router`
+
 ## About
 
-This is a simple mirror of [Xray](https://jfrog.com/xray/) Docker images taken from [JFrog Docker Registry](https://bintray.com/jfrog/reg2) and push to [Docker Hub](https://hub.docker.com/r/crazymax/xray/) and [Quay](https://quay.io/repository/crazymax/xray).<br />
+This is a simple mirror of [Xray](https://jfrog.com/xray/) Docker images taken from
+[JFrog Docker Registry](https://bintray.com/jfrog/reg2) and push to [Docker Hub](https://hub.docker.com/r/crazymax/xray/)
+and [Quay](https://quay.io/repository/crazymax/xray).<br />
 If you are interested, [check out](https://hub.docker.com/r/crazymax/) my other Docker images!
 
 💡 Want to be notified of new releases? Check out 🔔 [Diun (Docker Image Update Notifier)](https://github.com/crazy-max/diun) project!
